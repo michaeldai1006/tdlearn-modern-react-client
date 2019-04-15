@@ -4,7 +4,6 @@ import { signIn, signOut } from '../actions';
 
 class GoogleAuth extends React.Component {
     componentDidMount() {
-        console.log('ENV', process.env);
         window.gapi.load('client:auth2', () => {
             window.gapi.client.init({
                 clientId: process.env.REACT_APP_CLIENT_ID,
